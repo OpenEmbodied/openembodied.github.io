@@ -60,7 +60,7 @@ export function Header() {
 
 
 
-                    <div className="flex gap-6">
+                    <div className="flex gap-2">
 
 
 
