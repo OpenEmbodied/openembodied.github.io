@@ -37,33 +37,25 @@ export function Header() {
 
 
             {/* <NavigationMenu viewport={isMobile}> */}
-            <NavigationMenu className="fixed rounded-sm m-6 p-2 w-full bg-amber-600 z-50">
+            <NavigationMenu className="fixed rounded-sm m-6 p-2 w-full bg-amber-600 z-50 select-none">
                 <NavigationMenuList className="w-full flex-row gap-6 justify-between">
 
 
 
                     <div>
-                        <Button className="bg-background text-foreground hover:bg-white">
-                            <Link href="/" className="select-none">
-                                <Image
-                                    src="/resources/logo/OpenDriveLab/D.png"
-                                    alt="OpenDriveLab"
-                                    width={24}
-                                    height={24}
-                                    className="hover:scale-125 transition delay-100 duration-200"
-                                />
-                            </Link>
-                            <div className="h-full min-w-0.5 bg-foreground/50 select-none" />
-                            <Link href="https://mmlab.hk/" target="_blank" className="select-none">
-                                <Image
-                                    src="/resources/logo/OpenDriveLab/HKU_MMLAB.png"
-                                    alt="OpenDriveLab"
-                                    width={24}
-                                    height={24}
-                                    className="hover:scale-125 transition delay-100 duration-200"
-                                />
-                            </Link>
-                        </Button>
+                        <NavigationMenuItem>
+                            <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                                <Link href="/" className="group">
+                                    <Image
+                                        src="/resources/logo/OpenDriveLab/D.png"
+                                        alt="OpenDriveLab"
+                                        width={24}
+                                        height={24}
+                                        className="group-hover:scale-125 transition delay-100 duration-200"
+                                    />
+                                </Link>
+                            </NavigationMenuLink>
+                        </NavigationMenuItem>
                     </div>
 
 
