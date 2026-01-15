@@ -6,11 +6,6 @@ const nextConfig: NextConfig = {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: 'opendrivelab.github.io',
-                pathname: '/**',
-            },
-            {
-                protocol: 'https',
                 hostname: 'img.shields.io',
                 pathname: '/**',
             },
