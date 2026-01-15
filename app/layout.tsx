@@ -3,10 +3,6 @@ import type { Metadata } from "next";
 
 
 
-import { SidebarProvider } from "@/components/ui/sidebar"
-
-
-
 import { Header } from "@/components/header"
 
 
@@ -54,7 +50,6 @@ export default function RootLayout({
 
 
             <body id="#">       
-                <SidebarProvider>
 
 
 
@@ -66,12 +61,11 @@ export default function RootLayout({
 
 
 
-                </SidebarProvider>
             </body>
 
 
 
-            <GoogleAnalytics gaId="G-L7VEDHS6G8" />
+            <GoogleAnalytics gaId="G-" />
 
 
 

@@ -31,7 +31,7 @@ export function Header() {
 
 
 
-            <AppSidebar />
+            {/* <AppSidebar /> */}
 
 
 
@@ -63,7 +63,7 @@ export function Header() {
 
 
 
-                <NavigatorTrigger />
+                {/* <NavigatorTrigger /> */}
 
 
 
