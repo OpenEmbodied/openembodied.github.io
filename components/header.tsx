@@ -18,7 +18,7 @@ import {
     NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 import { Button } from "@/components/ui/button"
-
+import { NavigationBar } from '@/components/navigation_bar';
 
 
 import { usePathname } from 'next/navigation';
@@ -42,8 +42,13 @@ export function Header() {
     // const isMobile = useIsMobile()
 
     return (
-        <header key={pathname} className="w-svh">
+        <header key={pathname}>
 
+
+
+            <div className="relative w-full">
+                <NavigationBar />
+            </div>
 
             {/* <NavigationMenu viewport={isMobile}> */}
             <NavigationMenu className="w-full fixed px-6 pt-6 w-full z-50 select-none inset-x-0">
