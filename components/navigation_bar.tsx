@@ -99,9 +99,17 @@ export interface NavigationBarProps extends React.HTMLAttributes<HTMLElement> {
   onSignInClick?: () => void;
   onCtaClick?: () => void;
 }
+
+
+
 // Default navigation links
 const defaultNavigationLinks: NavigationBarNavItem[] = [
-  { href: '#', label: 'Home' },
+    {
+        label: 'Documents',
+        submenu: false,
+        type: 'simple',
+        href: 'https://opendrivelab.com',
+      },
   {
     label: 'Features',
     submenu: true,
@@ -126,26 +134,14 @@ const defaultNavigationLinks: NavigationBarNavItem[] = [
   },
   {
     label: 'Pricing',
-    submenu: true,
+    submenu: false,
     type: 'simple',
-    items: [
-      { href: '#product-a', label: 'Product A' },
-      { href: '#product-b', label: 'Product B' },
-      { href: '#product-c', label: 'Product C' },
-      { href: '#product-d', label: 'Product D' },
-    ],
-  },
-  {
-    label: 'About',
-    submenu: true,
-    type: 'icon',
-    items: [
-      { href: '#getting-started', label: 'Getting Started', icon: 'BookOpenIcon' },
-      { href: '#tutorials', label: 'Tutorials', icon: 'LifeBuoyIcon' },
-      { href: '#about-us', label: 'About Us', icon: 'InfoIcon' },
-    ],
+    href: '#recruit',
   },
 ];
+
+
+
 export const NavigationBar = React.forwardRef<HTMLElement, NavigationBarProps>(
   (
     {
@@ -155,7 +151,7 @@ export const NavigationBar = React.forwardRef<HTMLElement, NavigationBarProps>(
       navigationLinks = defaultNavigationLinks,
       signInText = 'Sign In',
       signInHref = '#signin',
-      ctaText = 'Get Started',
+      ctaText = 'Purchase',
       ctaHref = '#get-started',
       onSignInClick,
       onCtaClick,
