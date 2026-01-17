@@ -72,7 +72,7 @@ export function Footer() {
     return (
         <footer className="w-full px-6 my-24 gap-6 flex flex-col items-center select-none">
 
-            <div className="w-full max-w-7xl flex gap-6 flex-wrap">
+            {/* <div className="w-full max-w-7xl flex gap-6 flex-wrap">
                 {links.map((link) => (
                     <Link href={link.url} target="_blank" key={link.icon} className="size-4 md:size-5 group">
                         <AspectRatio ratio={1/1}>
@@ -85,14 +85,14 @@ export function Footer() {
                         </AspectRatio>
                     </Link>
                 ))}
-            </div>
+            </div> */}
 
             <div className="w-full max-w-7xl text-xs">
                 <EmailSubscribe />
             </div>
 
             <div className="w-full max-w-7xl text-xs">
-                OpenDriveLab © 2021 - 2026
+                OpenEmbodied © 2026
             </div>
 
         </footer>
