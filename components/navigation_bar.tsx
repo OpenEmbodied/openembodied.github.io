@@ -111,7 +111,7 @@ const defaultNavigationLinks: NavigationBarNavItem[] = [
         href: 'https://opendrivelab.com',
       },
   {
-    label: 'Features',
+    label: 'Community',
     submenu: true,
     type: 'description',
     items: [
@@ -133,10 +133,10 @@ const defaultNavigationLinks: NavigationBarNavItem[] = [
     ],
   },
   {
-    label: 'Pricing',
+    label: 'Contact',
     submenu: false,
     type: 'simple',
-    href: '#recruit',
+    href: 'mailto:xx@dwx.cw',
   },
 ];
 
@@ -199,15 +199,17 @@ export const NavigationBar = React.forwardRef<HTMLElement, NavigationBarProps>(
       }
     };
     return (
-      <header
+      <div
         ref={combinedRef}
         className={cn(
-          'sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-4 md:px-6 [&_*]:no-underline',
+          ' px-6 pt-6 fixed  z-50 w-full select-none',
           className
         )}
         {...(props as any)}
       >
-        <div className="container mx-auto flex h-16 max-w-screen-2xl items-center justify-between gap-4">
+        <div className="w-full p-3 bg-black/50 backdrop-blur rounded-sm flex justify-between items-center">
+
+        
           {/* Left side */}
           <div className="flex items-center gap-2">
             {/* Mobile menu trigger */}
@@ -279,7 +281,7 @@ export const NavigationBar = React.forwardRef<HTMLElement, NavigationBarProps>(
                 onClick={(e) => e.preventDefault()}
                 className="flex items-center space-x-2 text-primary hover:text-primary/90 transition-colors cursor-pointer"
               >
-                {/* <div>
+                <div>
 
                     <Link href="/" className="group/logo">
                         <Image
@@ -290,8 +292,8 @@ export const NavigationBar = React.forwardRef<HTMLElement, NavigationBarProps>(
                             className="group-hover/logo:scale-125 transition delay-100 duration-200"
                         />
                     </Link>
-                </div> */}
-                <span className="hidden font-bold text-xl sm:inline-block">MMHand</span>
+                </div>
+                <span className="font-bold text-xl">MMHand</span>
               </button>
               {/* Navigation menu */}
               {!isMobile && (
@@ -417,7 +419,7 @@ export const NavigationBar = React.forwardRef<HTMLElement, NavigationBarProps>(
             </Button>
           </div>
         </div>
-      </header>
+      </div>
     );
   }
 );
