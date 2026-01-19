@@ -126,7 +126,7 @@ const defaultNavigationLinks: NavigationBarNavItem[] = [
         description: 'Learn how to use the library.',
       },
       {
-        href: '#templates',
+        href: 'https://www.opendrivelab.com',
         label: 'Templates',
         description: 'Pre-built layouts for common use cases.',
       },
@@ -238,10 +238,13 @@ export const NavigationBar = React.forwardRef<HTMLElement, NavigationBarProps>(
                                 {link.items?.map((item, itemIndex) => (
                                   <li key={itemIndex}>
                                     <button
-                                      onClick={(e) => e.preventDefault()}
+                                      // onClick={(e) => e.preventDefault()}
                                       className="flex w-full items-center rounded-sm px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground cursor-pointer no-underline"
                                     >
-                                      {item.label}
+                                                      <a href={link.href} target='_blank'>
+                                                      {item.label}
+                                      </a>
+                                      
                                     </button>
                                   </li>
                                 ))}
@@ -249,10 +252,12 @@ export const NavigationBar = React.forwardRef<HTMLElement, NavigationBarProps>(
                             </>
                           ) : (
                             <button
-                              onClick={(e) => e.preventDefault()}
+                              // onClick={(e) => e.preventDefault()}
                               className="flex w-full items-center rounded-sm px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground cursor-pointer no-underline"
                             >
-                              {link.label}
+                              <a href={link.href} target='_blank'>
+                                                      {link.label}
+                                      </a>
                             </button>
                           )}
                           {/* Add separator between different types of items */}
@@ -278,7 +283,7 @@ export const NavigationBar = React.forwardRef<HTMLElement, NavigationBarProps>(
             {/* Main nav */}
             <div className="flex items-center gap-6">
               <button 
-                onClick={(e) => e.preventDefault()}
+                // onClick={(e) => e.preventDefault()}
                 className="flex items-center space-x-2 text-primary hover:text-primary/90 transition-colors cursor-pointer"
               >
                 <div>
@@ -312,7 +317,7 @@ export const NavigationBar = React.forwardRef<HTMLElement, NavigationBarProps>(
                               <div className="row-span-3">
                                 <NavigationMenuLink asChild>
                                   <button
-                                    onClick={(e) => e.preventDefault()}
+                                    // onClick={(e) => e.preventDefault()}
                                     className="flex h-full w-full select-none flex-col justify-center items-center text-center rounded-sm bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md cursor-pointer"
                                   >
                                     <div className="mb-3 text-xl font-medium">
@@ -381,8 +386,9 @@ export const NavigationBar = React.forwardRef<HTMLElement, NavigationBarProps>(
                     ) : (
                       <NavigationMenuLink
                         href={link.href}
+                        target='_blank'
                         className={cn(navigationMenuTriggerStyle(), 'cursor-pointer')}
-                        onClick={(e) => e.preventDefault()}
+                        // onClick={(e) => e.preventDefault()}
                       >
                         {link.label}
                       </NavigationMenuLink>
@@ -410,12 +416,10 @@ export const NavigationBar = React.forwardRef<HTMLElement, NavigationBarProps>(
             <Button
               size="sm"
               className="text-sm font-medium px-4 h-9 rounded-sm shadow-sm"
-              onClick={(e) => {
-                e.preventDefault();
-                if (onCtaClick) onCtaClick();
-              }}
             >
-              {ctaText}
+                <Link href='https://purchase.openembodied.dev' target='_blank'>
+                {ctaText}
+              </Link>
             </Button>
           </div>
         </div>
@@ -452,7 +456,7 @@ const ListItem = React.forwardRef<
     <NavigationMenuLink asChild>
       <a
         ref={ref}
-        onClick={(e) => e.preventDefault()}
+        // onClick={(e) => e.preventDefault()}
         className={cn(
           'block select-none space-y-1 rounded-sm p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground cursor-pointer',
           className
