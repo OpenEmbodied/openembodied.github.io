@@ -128,20 +128,14 @@ const defaultNavigationLinks: NavigationBarNavItem[] = [
     items: [
       {
         href: '#components',
-        label: 'Components',
-        description: 'Browse all components in the library.',
+        label: 'Discord',
+        description: 'Join our global community for updates, discussions, and collaboration.',
         target: '_blank',
       },
       {
         href: '#documentation',
-        label: 'Documentation',
-        description: 'Learn how to use the library.',
-        target: '_blank',
-      },
-      {
-        href: 'https://www.opendrivelab.com',
-        label: 'Templates',
-        description: 'Pre-built layouts for common use cases.',
+        label: 'Lumina',
+        description: '获取最新动态并参与中文交流',
         target: '_blank',
       },
     ],
