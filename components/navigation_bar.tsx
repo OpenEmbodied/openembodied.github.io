@@ -237,28 +237,27 @@ export const NavigationBar = React.forwardRef<HTMLElement, NavigationBarProps>(
                               <ul>
                                 {link.items?.map((item, itemIndex) => (
                                   <li key={itemIndex}>
-                                    <button
-                                      // onClick={(e) => e.preventDefault()}
-                                      className="flex w-full items-center rounded-sm px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground cursor-pointer no-underline"
-                                    >
-                                                      <a href={link.href} target='_blank'>
+
+                                                      <a 
+                                                      href={item.href} 
+                                                      target='_blank'
+                                                      className="flex w-full items-center rounded-sm px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground cursor-pointer no-underline">
                                                       {item.label}
                                       </a>
                                       
-                                    </button>
                                   </li>
                                 ))}
                               </ul>
                             </>
                           ) : (
-                            <button
-                              // onClick={(e) => e.preventDefault()}
+
+                              <a 
+                              href={link.href} 
+                              target='_blank'
                               className="flex w-full items-center rounded-sm px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground cursor-pointer no-underline"
-                            >
-                              <a href={link.href} target='_blank'>
+                              >
                                                       {link.label}
                                       </a>
-                            </button>
                           )}
                           {/* Add separator between different types of items */}
                           {index < navigationLinks.length - 1 &&
