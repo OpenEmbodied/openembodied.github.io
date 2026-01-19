@@ -385,7 +385,7 @@ export const NavigationBar = React.forwardRef<HTMLElement, NavigationBarProps>(
                               ))}
                             </div>
                           ) : (
-                            <div className="grid gap-3 p-4">
+                            <div className="grid gap-3 p-4 w-[426px]">
                               {link.items?.map((item, itemIndex) => (
                                 <ListItem
                                   key={itemIndex}
