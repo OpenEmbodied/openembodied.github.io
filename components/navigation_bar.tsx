@@ -81,11 +81,13 @@ export interface NavigationBarNavItem {
   label: string;
   submenu?: boolean;
   type?: 'description' | 'simple' | 'icon';
+  target: string;
   items?: Array<{
     href: string;
     label: string;
     description?: string;
     icon?: string;
+    target: string;
   }>;
 }
 export interface NavigationBarProps extends React.HTMLAttributes<HTMLElement> {
@@ -104,31 +106,43 @@ export interface NavigationBarProps extends React.HTMLAttributes<HTMLElement> {
 
 // Default navigation links
 const defaultNavigationLinks: NavigationBarNavItem[] = [
+  {
+    label: 'Features',
+    submenu: false,
+    type: 'simple',
+    href: '#features',
+    target: '_self',
+  },
     {
         label: 'Documents',
         submenu: false,
         type: 'simple',
         href: 'https://opendrivelab.com',
+        target: '_blank',
       },
   {
     label: 'Community',
     submenu: true,
     type: 'description',
+    target: '',
     items: [
       {
         href: '#components',
         label: 'Components',
         description: 'Browse all components in the library.',
+        target: '_blank',
       },
       {
         href: '#documentation',
         label: 'Documentation',
         description: 'Learn how to use the library.',
+        target: '_blank',
       },
       {
         href: 'https://www.opendrivelab.com',
         label: 'Templates',
         description: 'Pre-built layouts for common use cases.',
+        target: '_blank',
       },
     ],
   },
@@ -137,6 +151,7 @@ const defaultNavigationLinks: NavigationBarNavItem[] = [
     submenu: false,
     type: 'simple',
     href: 'mailto:xx@dwx.cw',
+    target: '_self',
   },
 ];
 
@@ -240,7 +255,7 @@ export const NavigationBar = React.forwardRef<HTMLElement, NavigationBarProps>(
 
                                                       <a 
                                                       href={item.href} 
-                                                      target='_blank'
+                                                      target={item.target}
                                                       className="flex w-full items-center rounded-sm px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground cursor-pointer no-underline">
                                                       {item.label}
                                       </a>
@@ -253,7 +268,7 @@ export const NavigationBar = React.forwardRef<HTMLElement, NavigationBarProps>(
 
                               <a 
                               href={link.href} 
-                              target='_blank'
+                              target={link.target}
                               className="flex w-full items-center rounded-sm px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground cursor-pointer no-underline"
                               >
                                                       {link.label}
@@ -302,7 +317,7 @@ export const NavigationBar = React.forwardRef<HTMLElement, NavigationBarProps>(
               {/* Navigation menu */}
               {!isMobile && (
                 <NavigationMenu className="flex">
-                  <NavigationMenuList className="gap-1">
+                  <NavigationMenuList className="gap-3">
                 {navigationLinks.map((link, index) => (
                   <NavigationMenuItem key={index}>
                     {link.submenu ? (
@@ -334,6 +349,7 @@ export const NavigationBar = React.forwardRef<HTMLElement, NavigationBarProps>(
                                   title={item.label}
                                   href={item.href}
                                   type={link.type}
+                                  target={item.target}
                                 >
                                   {item.description}
                                 </ListItem>
@@ -347,6 +363,7 @@ export const NavigationBar = React.forwardRef<HTMLElement, NavigationBarProps>(
                                   title={item.label}
                                   href={item.href}
                                   type={link.type}
+                                  target={item.target}
                                 >
                                   {item.description}
                                 </ListItem>
@@ -361,6 +378,7 @@ export const NavigationBar = React.forwardRef<HTMLElement, NavigationBarProps>(
                                   href={item.href}
                                   icon={item.icon}
                                   type={link.type}
+                                  target={item.target}
                                 >
                                   {item.description}
                                 </ListItem>
@@ -374,6 +392,7 @@ export const NavigationBar = React.forwardRef<HTMLElement, NavigationBarProps>(
                                   title={item.label}
                                   href={item.href}
                                   type={link.type}
+                                  target={item.target}
                                 >
                                   {item.description}
                                 </ListItem>
@@ -385,7 +404,7 @@ export const NavigationBar = React.forwardRef<HTMLElement, NavigationBarProps>(
                     ) : (
                       <NavigationMenuLink
                         href={link.href}
-                        target='_blank'
+                        target={link.target}
                         className={cn(navigationMenuTriggerStyle(), 'cursor-pointer')}
                         // onClick={(e) => e.preventDefault()}
                       >
