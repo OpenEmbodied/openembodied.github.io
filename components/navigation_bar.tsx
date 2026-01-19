@@ -297,7 +297,7 @@ export const NavigationBar = React.forwardRef<HTMLElement, NavigationBarProps>(
                         />
                     </Link>
                 </div>
-                <span className="font-bold text-xl">MMHand</span>
+                <span className="font-bold text-xl text-white">MMHand</span>
               </button>
               {/* Navigation menu */}
               {!isMobile && (
