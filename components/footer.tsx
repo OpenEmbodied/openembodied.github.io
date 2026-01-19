@@ -19,47 +19,7 @@ const links: {
 }[] = [
     {
         icon: 'email',
-        url: 'mailto:contact@opendrivelab.com',
-    },
-    {
-        icon: 'github',
-        url: 'https://github.com/OpenDriveLab',
-    },
-    {
-        icon: 'huggingface',
-        url: 'https://huggingface.co/OpenDriveLab',
-    },
-    {
-        icon: 'x',
-        url: 'https://twitter.com/OpenDriveLab',
-    },
-    {
-        icon: 'bluesky',
-        url: 'https://bsky.app/profile/opendrivelab.bsky.social',
-    },
-    {
-        icon: 'linkedin',
-        url: 'https://www.linkedin.com/company/opendrivelab/',
-    },
-    {
-        icon: 'zhihu',
-        url: 'https://www.zhihu.com/people/PerceptionX',
-    },
-    {
-        icon: 'xiaohongshu',
-        url: 'https://www.xiaohongshu.com/user/profile/67467f16000000001c0182ba',
-    },
-    {
-        icon: 'youtube',
-        url: 'https://www.youtube.com/@OpenDriveLab',
-    },
-    {
-        icon: 'bilibili',
-        url: 'https://space.bilibili.com/503310953',
-    },
-    {
-        icon: 'discord',
-        url: 'https://discord.gg/vCw2PjR2B8',
+        url: 'mailto:xx@opendrivelab.com',
     },
 ];
 
