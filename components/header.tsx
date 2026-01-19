@@ -53,7 +53,7 @@ export function Header() {
 
 
             <div className="fixed right-0 bottom-0 m-6 z-50">
-                <Link href="#" className="bg-background text-foreground hover:bg-o-blue hover:text-background rounded-full flex justify-center items-center p-2 select-none">
+                <Link href="#" className="bg-background text-foreground hover:bg-foreground hover:text-background rounded-full flex justify-center items-center p-2 select-none">
                     <span>
                         <svg fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 18.75 7.5-7.5 7.5 7.5" />
